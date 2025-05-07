@@ -1,9 +1,11 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Киберполигон</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,7 +18,6 @@
       </a>
       <nav class="nav">
         <ul>
-          <li><a href="#home">Главная</a></li>
           <li><a href="#about">О проекте</a></li>
           <li><a href="#team">Участники</a></li>
           <li><a href="#journal">Журнал</a></li>
@@ -28,18 +29,20 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section id="home" class="section hero active">
-      <div class="container">
-        <h1>Киберполигон</h1>
-        <p>Инновационная платформа для подготовки специалистов в области кибербезопасности.</p>
+    <!-- Hero с геометрией -->
+    <section id="home" class="section hero">
+      <div class="geom-shapes">
+        <div class="circle circle--big"></div>
+        <div class="circle circle--small"></div>
+        <div class="diag diag--left"></div>
+        <div class="diag diag--right"></div>
       </div>
     </section>
 
     <!-- Аннотация -->
     <section class="section annotation">
       <div class="container">
-        <h2>Аннотация проекта</h2>
+        <h2 class="section-title">Аннотация проекта</h2>
         <p>«Киберполигон» — это образовательная и исследовательская среда для тренировки навыков защиты и атаки в безопасном виртуальном окружении.</p>
         <ul class="stats">
           <li><strong>75</strong> участников</li>
@@ -51,20 +54,18 @@
     <!-- О проекте -->
     <section id="about" class="section about">
       <div class="container">
-        <h2>О проекте</h2>
+        <h2 class="section-title">О проекте</h2>
         <div class="about-grid">
-          <!-- Проблемы -->
           <article>
             <h3>Проблемы</h3>
             <ul>
-              <li>Дефицит практики: студенты редко работают с реальными кейсами.</li>
+              <li>Дефицит практики с реальными кейсами.</li>
               <li>Устаревшие методы обучения.</li>
               <li>Нехватка инфраструктуры.</li>
               <li>Разрыв между вузами и индустрией.</li>
               <li>Дефицит квалифицированных кадров.</li>
             </ul>
           </article>
-          <!-- Решения -->
           <article>
             <h3>Решение</h3>
             <div class="solution-grid">
@@ -74,7 +75,7 @@
               </div>
               <div class="card">
                 <h4>Симуляции</h4>
-                <p>Интеграция Docker, KVM и VirtualBox для изолированных лабораторных сред.</p>
+                <p>Интеграция Docker, KVM и VirtualBox для изолированных лабораторий.</p>
               </div>
               <div class="card">
                 <h4>Модули</h4>
@@ -93,7 +94,7 @@
     <!-- Участники -->
     <section id="team" class="section team">
       <div class="container">
-        <h2>Участники</h2>
+        <h2 class="section-title">Участники</h2>
         <div class="members-grid">
           <div class="member">
             <button class="member-toggle">Дерягин Д.А.</button>
@@ -115,7 +116,7 @@
             <div class="member-details">
               <ul>
                 <li>Vagrant, VirtualBox</li>
-                <li>Анализ уязвимостей с помощью Kali и Metasploit</li>
+                <li>Анализ уязвимостей с Kali и Metasploit</li>
               </ul>
             </div>
           </div>
@@ -126,7 +127,7 @@
     <!-- Журнал -->
     <section id="journal" class="section journal">
       <div class="container">
-        <h2>Журнал</h2>
+        <h2 class="section-title">Журнал</h2>
         <div class="posts">
           <article class="post">
             <h3>3. Разработка статического веб-ресурса</h3>
@@ -141,7 +142,7 @@
             <time datetime="2025-04-23">23.04.2025</time>
             <ul>
               <li>Организация репозитория</li>
-              <li>Git-операции и Markdown</li>
+              <li>Git и Markdown</li>
             </ul>
           </article>
           <article class="post">
@@ -158,10 +159,11 @@
     <!-- Ресурсы -->
     <section id="resources" class="section resources">
       <div class="container">
-        <h2>Ресурсы</h2>
+        <h2 class="section-title">Ресурсы</h2>
         <div class="solution-grid">
-          <!-- Иннополис с изображениями -->
-          <div class="card">
+          <!-- Инополис — главное -->
+          <div class="card card--featured">
+            <div class="badge">Главное</div>
             <h4>Иннополис</h4>
             <a href="https://oocfs.innopolis.university/index.php/s/GgSWTRm7e335m2t" target="_blank">
               Учебный тренажёр «Иннокиберполигон»
@@ -170,31 +172,24 @@
             <img src="images/image2.png" alt="Тренажёры">
             <img src="images/image3.png" alt="Иннокиберполигон">
           </div>
-          <!-- Остальные без изображений -->
-          <div class="card">
+          <!-- Другие карточки маленькие -->
+          <div class="card small">
             <h4>ГУАП</h4>
             <a href="https://www.novostiitkanala.ru/news/detail.php?ID=169070" target="_blank">
               Центр киберучений
             </a>
           </div>
-          <div class="card">
+          <div class="card small">
             <h4>ИТМО</h4>
             <a href="https://www.company.rt.ru/press/news_fill/d459226/" target="_blank">
-              Международный центр кибербезопасности
+              Национальный киберполигон
             </a>
           </div>
-          <div class="card">
+          <div class="card small">
             <h4>МЭИ</h4>
             <a href="https://dzen.ru/a/Y0kkLTaMtmNwQsVg" target="_blank">
               Киберфизическая модель энергосистемы
             </a>
-          </div>
-          <div class="card">
-            <h4>Open Source проекты</h4>
-            <ul>
-              <li><a href="https://www.kali.org/" target="_blank">Kali Linux</a></li>
-              <li><a href="https://www.metasploit.com/" target="_blank">Metasploit Framework</a></li>
-            </ul>
           </div>
         </div>
       </div>
@@ -202,9 +197,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © 2025 Киберполигон
-    </div>
+    <div class="container">© 2025 Киберполигон</div>
   </footer>
 
   <script src="js/main.js"></script>
