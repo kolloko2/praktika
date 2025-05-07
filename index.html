@@ -1,205 +1,31 @@
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Киберполигон</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+/* --- Ресурсы: горизонтальная featured + ряд small --- */
+.resources-featured {
+  margin-bottom: 2rem;
+}
+.resources-featured .card--featured {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+.resources-featured .featured-images {
+  display: flex;
+  gap: 1rem;
+}
+.resources-featured .featured-images img {
+  width: calc((100% - 2rem) / 3);
+  border-radius: 4px;
+  object-fit: cover;
+}
 
-  <header class="header">
-    <div class="container">
-      <a href="#home" class="logo">
-        <img src="images/logotip.png" alt="Логотип">
-        <span>Киберполигон</span>
-      </a>
-      <nav class="nav">
-        <ul>
-          <li><a href="#about">О проекте</a></li>
-          <li><a href="#team">Участники</a></li>
-          <li><a href="#journal">Журнал</a></li>
-          <li><a href="#resources">Ресурсы</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Меню">&#9776;</button>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero с геометрией -->
-    <section id="home" class="section hero">
-      <div class="geom-shapes">
-        <div class="circle circle--big"></div>
-        <div class="circle circle--small"></div>
-        <div class="diag diag--left"></div>
-        <div class="diag diag--right"></div>
-      </div>
-    </section>
-
-    <!-- Аннотация -->
-    <section class="section annotation">
-      <div class="container">
-        <h2 class="section-title">Аннотация проекта</h2>
-        <p>«Киберполигон» — это образовательная и исследовательская среда для тренировки навыков защиты и атаки в безопасном виртуальном окружении.</p>
-        <ul class="stats">
-          <li><strong>75</strong> участников</li>
-          <li>Куратор: <em>Гневшев А.Ю.</em></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- О проекте -->
-    <section id="about" class="section about">
-      <div class="container">
-        <h2 class="section-title">О проекте</h2>
-        <div class="about-grid">
-          <article>
-            <h3>Проблемы</h3>
-            <ul>
-              <li>Дефицит практики с реальными кейсами.</li>
-              <li>Устаревшие методы обучения.</li>
-              <li>Нехватка инфраструктуры.</li>
-              <li>Разрыв между вузами и индустрией.</li>
-              <li>Дефицит квалифицированных кадров.</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Решение</h3>
-            <div class="solution-grid">
-              <div class="card">
-                <h4>Веб-платформа</h4>
-                <p>React + Django с удобным интерфейсом и управлением виртуальными средами.</p>
-              </div>
-              <div class="card">
-                <h4>Симуляции</h4>
-                <p>Интеграция Docker, KVM и VirtualBox для изолированных лабораторий.</p>
-              </div>
-              <div class="card">
-                <h4>Модули</h4>
-                <p>Учебно-тренировочные задания: квесты и CTF-соревнования.</p>
-              </div>
-              <div class="card">
-                <h4>Партнёрская сеть</h4>
-                <p>Сотрудничество с ИТ-компаниями и университетами для практики и финансирования.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Участники -->
-    <section id="team" class="section team">
-      <div class="container">
-        <h2 class="section-title">Участники</h2>
-        <div class="members-grid">
-          <div class="member">
-            <button class="member-toggle">Дерягин Д.А.</button>
-            <div class="member-details">
-              <ul>
-                <li>VMware, Vagrant, VirtualBox, Docker</li>
-                <li>Настройка Windows Server 2016</li>
-              </ul>
-            </div>
-          </div>
-          <div class="member">
-            <button class="member-toggle">Кодзаев Н.П.</button>
-            <div class="member-details">
-              <p>Изучил системы виртуализации, участвовал в развёртывании лабораторий.</p>
-            </div>
-          </div>
-          <div class="member">
-            <button class="member-toggle">Колесникова И.В.</button>
-            <div class="member-details">
-              <ul>
-                <li>Vagrant, VirtualBox</li>
-                <li>Анализ уязвимостей с Kali и Metasploit</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Журнал -->
-    <section id="journal" class="section journal">
-      <div class="container">
-        <h2 class="section-title">Журнал</h2>
-        <div class="posts">
-          <article class="post">
-            <h3>3. Разработка статического веб-ресурса</h3>
-            <time datetime="2025-04-23">23.04.2025</time>
-            <ul>
-              <li>HTML + CSS</li>
-              <li>Секции: Главная, О проекте, Участники, Журнал, Ресурсы</li>
-            </ul>
-          </article>
-          <article class="post">
-            <h3>2. Оформление документации в Markdown</h3>
-            <time datetime="2025-04-23">23.04.2025</time>
-            <ul>
-              <li>Организация репозитория</li>
-              <li>Git и Markdown</li>
-            </ul>
-          </article>
-          <article class="post">
-            <h3>1. Работа с Git</h3>
-            <time datetime="2025-04-23">23.04.2025</time>
-            <ul>
-              <li>git clone, commit, push, branch</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ресурсы -->
-    <section id="resources" class="section resources">
-      <div class="container">
-        <h2 class="section-title">Ресурсы</h2>
-        <div class="solution-grid">
-          <!-- Инополис — главное -->
-          <div class="card card--featured">
-            <div class="badge">Главное</div>
-            <h4>Иннополис</h4>
-            <a href="https://oocfs.innopolis.university/index.php/s/GgSWTRm7e335m2t" target="_blank">
-              Учебный тренажёр «Иннокиберполигон»
-            </a>
-            <img src="images/image1.png" alt="3D-город">
-            <img src="images/image2.png" alt="Тренажёры">
-            <img src="images/image3.png" alt="Иннокиберполигон">
-          </div>
-          <!-- Другие карточки маленькие -->
-          <div class="card small">
-            <h4>ГУАП</h4>
-            <a href="https://www.novostiitkanala.ru/news/detail.php?ID=169070" target="_blank">
-              Центр киберучений
-            </a>
-          </div>
-          <div class="card small">
-            <h4>ИТМО</h4>
-            <a href="https://www.company.rt.ru/press/news_fill/d459226/" target="_blank">
-              Национальный киберполигон
-            </a>
-          </div>
-          <div class="card small">
-            <h4>МЭИ</h4>
-            <a href="https://dzen.ru/a/Y0kkLTaMtmNwQsVg" target="_blank">
-              Киберфизическая модель энергосистемы
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">© 2025 Киберполигон</div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+/* Маленькие карточки под featured */
+.resources-small {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.resources-small .card.small {
+  padding: 1rem;
+  border-top: 4px solid #ccc;
+  text-align: center;
+}
