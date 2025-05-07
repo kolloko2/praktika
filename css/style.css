@@ -1,10 +1,43 @@
-/* сброс дефолтного синего для всех a */
+/* css/style.css */
+
+/* Сброс и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fafafa;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ссылки */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* логотип: оборачиваем картинку и текст, убираем ссылку-спрайт */
+/* Header */
+.header {
+  background: #111;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -20,7 +53,109 @@ a {
   color: #fff;
 }
 
-/* карточки для проблем и решений */
+/* Навигация */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav a {
+  position: relative;
+  padding: 0.25rem 0;
+}
+.nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #4caf50;
+  transition: width .3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Мобильное меню */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  .nav.open ul {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* Секции */
+.section {
+  padding: 4rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .6s ease-out;
+}
+.section.active,
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero */
+.hero {
+  background: url('../images/image1.png') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.25rem;
+}
+
+/* Аннотация */
+.annotation {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.annotation .stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.annotation .stats li {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+/* О проекте (about) */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
 .about-grid article {
   background: #fff;
   padding: 1.5rem;
@@ -31,8 +166,6 @@ a {
   margin-bottom: 0.75rem;
   color: #4caf50;
 }
-
-/* список проблем теперь без маркеров внутри карточек */
 .about-grid article ul {
   list-style: none;
   padding-left: 0;
@@ -47,10 +180,97 @@ a {
   content: "•";
   position: absolute;
   left: 0;
-  color: #f44336; /* красный «маркер» проблем */
+  color: #f44336;
 }
 
-/* Решения оставляем с зелёными карточками */
+/* Решения */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
 .solution-grid .card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   border-top: 4px solid #4caf50;
+}
+.card h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* Участники */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.5rem;
+}
+.member {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.member-toggle {
+  width: 100%;
+  padding: 1rem;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+.member-details {
+  display: none;
+  padding: 1rem;
+  animation: fadeIn .4s forwards;
+}
+.member.open .member-details {
+  display: block;
+}
+
+/* Журнал */
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.post {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+}
+.post time {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Ресурсы */
+.resources img {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
