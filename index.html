@@ -29,7 +29,7 @@
 
   <main>
     <!-- Hero -->
-    <section id="home" class="section hero">
+    <section id="home" class="section hero active">
       <div class="container">
         <h1>Киберполигон</h1>
         <p>Инновационная платформа для подготовки специалистов в области кибербезопасности.</p>
@@ -53,20 +53,18 @@
       <div class="container">
         <h2>О проекте</h2>
         <div class="about-grid">
-          <article>
-            <h3>Введение</h3>
-            <p>Платформа объединяет React-фронтенд, Django-бэкенд и виртуализацию (Docker, KVM, VirtualBox) для моделирования кибератак.</p>
-          </article>
+          <!-- Проблемы -->
           <article>
             <h3>Проблемы</h3>
             <ul>
-              <li>Ограниченная практика с реальными кейсами.</li>
-              <li>Устаревшие учебные методики.</li>
-              <li>Нехватка инфраструктуры для тестирования.</li>
+              <li>Дефицит практики: студенты редко работают с реальными кейсами.</li>
+              <li>Устаревшие методы обучения.</li>
+              <li>Нехватка инфраструктуры.</li>
               <li>Разрыв между вузами и индустрией.</li>
-              <li>Дефицит квалифицированных специалистов.</li>
+              <li>Дефицит квалифицированных кадров.</li>
             </ul>
           </article>
+          <!-- Решения -->
           <article>
             <h3>Решение</h3>
             <div class="solution-grid">
@@ -76,15 +74,15 @@
               </div>
               <div class="card">
                 <h4>Симуляции</h4>
-                <p>Интеграция Docker, KVM и VirtualBox для изолированных лабораторий.</p>
+                <p>Интеграция Docker, KVM и VirtualBox для изолированных лабораторных сред.</p>
               </div>
               <div class="card">
                 <h4>Модули</h4>
-                <p>CTF-задания, квесты и тренажёры.</p>
+                <p>Учебно-тренировочные задания: квесты и CTF-соревнования.</p>
               </div>
               <div class="card">
-                <h4>Партнёры</h4>
-                <p>Сети университетов и ИТ-компаний для практики и финансирования.</p>
+                <h4>Партнёрская сеть</h4>
+                <p>Сотрудничество с ИТ-компаниями и университетами для практики и финансирования.</p>
               </div>
             </div>
           </article>
@@ -109,7 +107,7 @@
           <div class="member">
             <button class="member-toggle">Кодзаев Н.П.</button>
             <div class="member-details">
-              <p>Описание вклада...</p>
+              <p>Изучил системы виртуализации, участвовал в развёртывании лабораторий.</p>
             </div>
           </div>
           <div class="member">
@@ -117,7 +115,7 @@
             <div class="member-details">
               <ul>
                 <li>Vagrant, VirtualBox</li>
-                <li>Kali Linux, Metasploit</li>
+                <li>Анализ уязвимостей с помощью Kali и Metasploit</li>
               </ul>
             </div>
           </div>
@@ -131,7 +129,7 @@
         <h2>Журнал</h2>
         <div class="posts">
           <article class="post">
-            <h3>3. Статический веб-ресурс</h3>
+            <h3>3. Разработка статического веб-ресурса</h3>
             <time datetime="2025-04-23">23.04.2025</time>
             <ul>
               <li>HTML + CSS</li>
@@ -139,15 +137,15 @@
             </ul>
           </article>
           <article class="post">
-            <h3>2. Документация в Markdown</h3>
+            <h3>2. Оформление документации в Markdown</h3>
             <time datetime="2025-04-23">23.04.2025</time>
             <ul>
-              <li>GitHub репозиторий</li>
-              <li>Основы Git и Markdown</li>
+              <li>Организация репозитория</li>
+              <li>Git-операции и Markdown</li>
             </ul>
           </article>
           <article class="post">
-            <h3>1. Git</h3>
+            <h3>1. Работа с Git</h3>
             <time datetime="2025-04-23">23.04.2025</time>
             <ul>
               <li>git clone, commit, push, branch</li>
@@ -162,20 +160,41 @@
       <div class="container">
         <h2>Ресурсы</h2>
         <div class="solution-grid">
+          <!-- Иннополис с изображениями -->
           <div class="card">
             <h4>Иннополис</h4>
-            <a href="https://oocfs.innopolis.university/index.php/s/GgSWTRm7e335m2t" target="_blank">Учебный тренажёр</a>
+            <a href="https://oocfs.innopolis.university/index.php/s/GgSWTRm7e335m2t" target="_blank">
+              Учебный тренажёр «Иннокиберполигон»
+            </a>
             <img src="images/image1.png" alt="3D-город">
+            <img src="images/image2.png" alt="Тренажёры">
+            <img src="images/image3.png" alt="Иннокиберполигон">
           </div>
+          <!-- Остальные без изображений -->
           <div class="card">
             <h4>ГУАП</h4>
-            <a href="https://www.novostiitkanala.ru/news/detail.php?ID=169070" target="_blank">Центр киберучений</a>
-            <img src="images/image2.png" alt="Тренажёры">
+            <a href="https://www.novostiitkanala.ru/news/detail.php?ID=169070" target="_blank">
+              Центр киберучений
+            </a>
           </div>
           <div class="card">
             <h4>ИТМО</h4>
-            <a href="https://www.company.rt.ru/press/news_fill/d459226/" target="_blank">Национальный киберполигон</a>
-            <img src="images/image3.png" alt="Иннокиберполигон">
+            <a href="https://www.company.rt.ru/press/news_fill/d459226/" target="_blank">
+              Международный центр кибербезопасности
+            </a>
+          </div>
+          <div class="card">
+            <h4>МЭИ</h4>
+            <a href="https://dzen.ru/a/Y0kkLTaMtmNwQsVg" target="_blank">
+              Киберфизическая модель энергосистемы
+            </a>
+          </div>
+          <div class="card">
+            <h4>Open Source проекты</h4>
+            <ul>
+              <li><a href="https://www.kali.org/" target="_blank">Kali Linux</a></li>
+              <li><a href="https://www.metasploit.com/" target="_blank">Metasploit Framework</a></li>
+            </ul>
           </div>
         </div>
       </div>
